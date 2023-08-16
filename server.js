@@ -43,6 +43,14 @@ const post = require('./routes/Post')
 app.use('/api/v1', user);
 app.use('/api/v1', post);
 
+//Just for testing
+app.get('/', (req, res)=>{
+res.status(200).json({
+    success:true,
+    message:"Server is working"
+})
+})
+
 //Starting the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`)
